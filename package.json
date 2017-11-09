@@ -1,0 +1,37 @@
+{
+  "name": "start-template",
+  "version": "1.0.0",
+  "description": "Start template structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Villamizar",
+  "license": "ISC",
+  "dependencies": {
+    "browser": "^0.2.6",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "merge-stream": "^1.0.1",
+    "node-php-server": "^0.1.2",
+    "sync": "^0.2.5"
+  },
+  "devDependencies": {
+    "foundation": "^4.2.1-1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-install": "^1.1.0",
+    "gulp-js-minify": "0.0.3",
+    "gulp-merge": "^0.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "jquery": "^3.2.1",
+    "merge-stream": "^1.0.1",
+    "uglify": "^0.1.5",
+    "uglify-js": "^3.0.28"
+  }
+}

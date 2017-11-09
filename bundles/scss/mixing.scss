@@ -1,0 +1,30 @@
+
+@mixin this-is-for($media, $orientation: false) {
+
+    @if $media == mobile and $orientation != false {
+        @media only screen and (orientation: $orientation) { @content; }
+    }
+
+    @else if $media == tablet and $orientation != false {
+        @media only screen and (min-width: 40em) and (orientation: $orientation) { @content; }
+    }
+
+    @else if $media == mobile {
+        @media only screen and (max-width: 39.9em) { @content; }
+    }
+
+
+
+    @else if $media == tablet {
+        @media only screen and (max-width: 64em) { @content; }
+    }
+
+    @else if $media == desktop {
+        @media only screen and (min-width: 64em) { @content; }
+    }
+
+    @else if $media == large-desktop {
+        @media only screen and (min-width: 90em) { @content; }
+    }
+
+}

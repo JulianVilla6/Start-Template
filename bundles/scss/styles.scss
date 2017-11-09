@@ -1,0 +1,15 @@
+@include this-is-for(desktop) {
+  body{
+    background-color: white;
+}
+}
+@include this-is-for(tablet) {
+  body{
+    background-color: blue;
+}
+}
+@include this-is-for(mobile) {
+  body{
+    background-color: black;
+}
+}
