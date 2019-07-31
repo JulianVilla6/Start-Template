@@ -13,8 +13,10 @@
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
     "merge-stream": "^1.0.1",
     "node-php-server": "^0.1.2",
+    "nunjucks": "^3.2.0",
     "sync": "^0.2.5"
   },
   "devDependencies": {

@@ -23,8 +23,10 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyjs = require('gulp-js-minify');
 var min = require('gulp-cssmin');
 var name = require('gulp-rename');
-
-
+var nunj = require('nunjucks');
+var nunjucksRender = require('gulp-nunjucks-render');
+var siteOutput = 'app/';
+var inputTemplates = './templates/*.html';
 
 var fuentesJS = [
 
@@ -49,6 +51,13 @@ gulp.task('sass', function(){
   .pipe(sass({
     includePaths: ['scss']
   }));
+
+
+
+
+
+
+
 
 
 
@@ -80,6 +89,33 @@ gulp.task('js', function() {
 .pipe(reload({stream:true}))
 
 });
+
+
+
+
+
+
+
+gulp.task('templates', function() {
+  nunjucksRender.nunjucks.configure(['./templates/'])
+  // Gets .html and .nunjucks files in pages
+  return gulp.src(inputTemplates)
+/*
+
+    */
+    .pipe(nunjucksRender({
+      path: ['./templates/'],
+      watch: true,
+
+    }))
+
+
+
+
+
+  .pipe(gulp.dest(siteOutput))
+
+})
 
 
 
@@ -126,7 +162,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 
-gulp.task('watch', ['serve','js'], function() {
+gulp.task('watch', ['serve','js','templates'], function() {
   gulp.watch(["bundles/scss/*.scss"], ['sass']);
   gulp.watch(["bundles/js/*.js"], ['js']);
 });
